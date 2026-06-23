@@ -4,5 +4,8 @@ from . import views
 app_name = 'libros'
 
 urlpatterns = [
-    # Se completan en Fase 3
+    path('', views.listar, name='listar'),
+    path('crear/', views.crear, name='crear'),
+    path('editar/<int:id>/', views.editar, name='editar'),
+    path('eliminar/<int:id>/', views.eliminar, name='eliminar'),
 ]
