@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'libros:listar' %}">📚 Biblioteca</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="{% url 'libros:listar' %}">Libros</a>
+            <a class="nav-link" href="{% url 'libros:crear' %}">+ Nuevo</a>
+        </div>
+    </div>
+</nav>
