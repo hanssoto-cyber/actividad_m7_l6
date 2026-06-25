@@ -1,11 +1,8 @@
-from django.urls import path
-from . import views
+# libros/urls.py
+from rest_framework.routers import DefaultRouter
+from .views import LibroViewSet
 
-app_name = 'libros'
+router = DefaultRouter()
+router.register(r'', LibroViewSet, basename='libro')
 
-urlpatterns = [
-    path('', views.listar, name='listar'),
-    path('crear/', views.crear, name='crear'),
-    path('editar/<int:id>/', views.editar, name='editar'),
-    path('eliminar/<int:id>/', views.eliminar, name='eliminar'),
-]
+urlpatterns = router.urls
